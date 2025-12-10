@@ -1,6 +1,6 @@
 # ocr-pipeline-assignment
 
-This is a small project where I built a basic OCR + PII extraction pipeline for handwritten JPEG images.  
+In this assignment I built a basic OCR + PII extraction pipeline for handwritten JPEG images.  
 The main idea is to take a handwritten document, clean it up a bit, extract whatever text is readable, and then try to detect simple PII items like names, phone numbers, emails, etc.
 
 ## What the pipeline does
@@ -14,15 +14,12 @@ The main idea is to take a handwritten document, clean it up a bit, extract what
 I kept the code simple and modular so each part can be improved later if needed.
 
 ## About the accuracy
-Since these documents include a lot of handwriting (especially medical notes), the OCR output is not always perfect.  
-Handwritten text is naturally difficult for OCR, especially when:
+The pipeline runs properly on all the sample images, but the text accuracy depends a lot on the handwriting. 
+Since the documents have different writing styles and some parts are hard to read, the extracted text is not always perfect.
+Even then, the overall flow (preprocessing → OCR → PII detection → redaction) works correctly.
 
-- The writing is fast or messy
-- The document has signatures or shorthand
-- The scan is tilted or low quality
+If needed, the accuracy can be improved later by adding more preprocessing or trying a better handwriting OCR model.
 
-Still, the pipeline is able to run end-to-end on all sample images and extract some useful text.  
-The structure is in place, so the OCR accuracy can be improved easily by adding stronger preprocessing or by trying better handwriting OCR models in the future.
 
 ## What’s included
 - The Colab notebook with the full pipeline
