@@ -1,0 +1,19 @@
+DEPENDENCIES
+
+Python Version  
+Python 3.10+ (Colab default environment)
+
+System Dependencies  
+Tesseract OCR  
+(Pre-installed in Google Colab using: apt-get install tesseract-ocr)
+
+Python Libraries  
+opencv-python  
+pytesseract  
+Pillow  
+regex  
+spacy  
+matplotlib  
+
+spaCy Model  
+python -m spacy download en_core_web_sm
